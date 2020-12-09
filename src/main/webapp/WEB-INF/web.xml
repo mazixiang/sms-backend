@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <servlet>
+        <servlet-name>UpdateServlet</servlet-name>
+        <servlet-class>servlet.update.UpdateServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateServlet</servlet-name>
+        <url-pattern>/update</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateServletJson</servlet-name>
+        <servlet-class>servlet.update.UpdateServletJson</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateServletJson</servlet-name>
+        <url-pattern>/updateJson</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>QueryAllServlet</servlet-name>
+        <servlet-class>servlet.queryAll.QueryAllServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>QueryAllServlet</servlet-name>
+        <url-pattern>/queryAll</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>QueryAllJsonServlet</servlet-name>
+        <servlet-class>servlet.queryAll.QueryAllJsonServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>QueryAllJsonServlet</servlet-name>
+        <url-pattern>/queryAllJson</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ListAllServlet</servlet-name>
+        <servlet-class>servlet.queryAll.ListAllServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ListAllServlet</servlet-name>
+        <url-pattern>/listAll</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteServlet</servlet-name>
+        <servlet-class>servlet.delete.DeleteServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteServlet</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ModifyServlet</servlet-name>
+        <servlet-class>servlet.modify.ModifyServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ModifyServlet</servlet-name>
+        <url-pattern>/modify</url-pattern>
+    </servlet-mapping>
+</web-app>

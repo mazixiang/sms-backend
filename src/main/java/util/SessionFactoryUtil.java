@@ -5,19 +5,14 @@ import org.hibernate.cfg.Configuration;
 
 public class SessionFactoryUtil {
 
-    private static SessionFactory factory = null;
+  private static SessionFactory factory = null;
 
+  static {
+    Configuration cfg = new Configuration().configure();
+    factory = cfg.buildSessionFactory();
+  }
 
-    static {
-        Configuration cfg = new Configuration().configure();
-        factory = cfg.buildSessionFactory();
-    }
+  public static SessionFactory getInstance() { return factory; }
 
-    public static SessionFactory getInstance() {
-        return factory;
-    }
-
-    public static void close() {
-        factory.close();
-    }
+  public static void close() { factory.close(); }
 }

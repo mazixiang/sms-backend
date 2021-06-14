@@ -7,5 +7,16 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/StaffManagementSystem</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="hibernate.hbm.xml/Hibernate" uuid="c178b459-acbd-4566-a913-787bb2fe6fa4">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+/Users/mazixiang/Projects/IdeaProjects/sms-backend/src/main/resources/hibernate.hbm.xml</remarks>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1:3306/staff_management_system?useSSL=false&amp;characterEncoding=UTF-8</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

@@ -4,7 +4,7 @@ import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 
 public class Staff {
-    private String id;
+    private int id;
     private String name;
     private String password;
     private String gender;
@@ -14,9 +14,14 @@ public class Staff {
     private String department;
 
     public static Staff jsonStringToStaff(String jsonString) {
+        System.out.println(jsonString);
         Staff res = new Staff();
         JSONObject staffJsonObject = JSONUtil.parseObj(jsonString);
-        res.setId((String) staffJsonObject.get("id"));
+        if (staffJsonObject.get("id") != null) {
+            res.setId(Integer.parseInt((String) staffJsonObject.get("id")));
+        } else {
+            res.setId(0);
+        }
         res.setName((String) staffJsonObject.get("name"));
         res.setPassword((String) staffJsonObject.get("password"));
         res.setGender((String) staffJsonObject.get("gender"));
@@ -27,11 +32,11 @@ public class Staff {
         return res;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

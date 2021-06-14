@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="vo">
+
+    <class name="Staff" table="staff">
+        <id name="id" column="id" type="int">
+            <generator class="increment"/>
+        </id>
+        <property name="name" column="name" length="255"/>
+        <property name="password" column="password" length="255"/>
+        <property name="gender" column="gender" length="255"/>
+        <property name="age" column="age"/>
+        <property name="contactInfo" column="contact_info"/>
+        <property name="hobbies" column="hobbies"/>
+        <property name="department" column="department"/>
+    </class>
+
+</hibernate-mapping>

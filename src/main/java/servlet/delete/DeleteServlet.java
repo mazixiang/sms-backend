@@ -26,7 +26,7 @@ public class DeleteServlet extends HttpServlet {
 
         StaffDao staffDao = new StaffDaoImpl();
 
-        String id = req.getParameter("id");
+        int id = Integer.parseInt((String) req.getParameter("id"));
 
         Staff staff = new Staff();
         staff.setId(id);

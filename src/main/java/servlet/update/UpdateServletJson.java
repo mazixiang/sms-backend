@@ -36,7 +36,7 @@ public class UpdateServletJson extends HttpServlet {
 
         String updateResultString;
 
-        if (staff.getId() == null || staff.getId().length() == 0 || staff.getId().trim().length() == 0) {
+        if (staff.getId() == 0) {
             // add
             try {
                 staffDao.insert(staff);

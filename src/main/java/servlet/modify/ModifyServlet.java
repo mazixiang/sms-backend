@@ -28,7 +28,7 @@ public class ModifyServlet extends HttpServlet {
         // init staffDao
         StaffDao staffDao = new StaffDaoImpl();
 
-        String id = req.getParameter("id");
+        int id = Integer.parseInt(req.getParameter("id"));
         Staff targetStaff = new Staff();
         targetStaff.setId(id);
 

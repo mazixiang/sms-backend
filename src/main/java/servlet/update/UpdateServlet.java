@@ -41,7 +41,7 @@ public class UpdateServlet extends HttpServlet {
         Staff staff = new Staff();
 
         // Get parameters and set attributes
-        staff.setId(req.getParameter("id"));
+        staff.setId(Integer.parseInt(req.getParameter("id")));
         staff.setName(req.getParameter("name"));
         staff.setPassword(req.getParameter("password"));
         staff.setGender(req.getParameter("gender"));
@@ -54,7 +54,7 @@ public class UpdateServlet extends HttpServlet {
 
         String updateResultString;
 
-        if (staff.getId() == null || staff.getId().length() == 0 || staff.getId().trim().length() == 0) {
+        if (staff.getId() == 0) {
             // add
             try {
                 staffDao.insert(staff);
